@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VroomHome - Professional Cabinetry Services</title>
+    <meta name="description" content="Expert cabinetry solutions for residential and commercial spaces. Custom cabinet design, installation, and renovation services. Transform your home with professional craftsmanship.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .navBar_vrm7k {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .navContainer_vrm7k {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navLogo_vrm7k {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .navMenu_vrm7k {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .navMenu_vrm7k a {
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .navMenu_vrm7k a:hover {
+            color: #3498db;
+        }
+
+        .heroSection_vrm7k {
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(52, 73, 94, 0.8)), url('https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=1200');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 20px;
+            text-align: center;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .heroContent_vrm7k {
+            max-width: 800px;
+        }
+
+        .heroTitle_vrm7k {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .heroSubtitle_vrm7k {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: #ecf0f1;
+        }
+
+        .ctaButton_vrm7k {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .ctaButton_vrm7k:hover {
+            background: #c0392b;
+        }
+
+        .container_vrm7k {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section_vrm7k {
+            padding: 80px 20px;
+        }
+
+        .sectionTitle_vrm7k {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+
+        .servicesGrid_vrm7k {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .serviceCard_vrm7k {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .serviceCard_vrm7k:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .serviceIcon_vrm7k {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .serviceTitle_vrm7k {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .serviceDesc_vrm7k {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .aboutSection_vrm7k {
+            background: white;
+            padding: 60px 20px;
+        }
+
+        .aboutContent_vrm7k {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .aboutText_vrm7k {
+            color: #555;
+            line-height: 1.9;
+        }
+
+        .aboutText_vrm7k h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .aboutImage_vrm7k {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .historyBlock_vrm7k {
+            background: linear-gradient(135deg, #ecf0f1 0%, #bdc3c7 100%);
+            padding: 40px;
+            margin: 2rem 0;
+            border-left: 5px solid #e74c3c;
+            border-radius: 5px;
+        }
+
+        .historyYear_vrm7k {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .historyText_vrm7k {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .reviewsSection_vrm7k {
+            background: #f8f9fa;
+            padding: 60px 20px;
+        }
+
+        .reviewsGrid_vrm7k {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .reviewCard_vrm7k {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .reviewStars_vrm7k {
+            color: #f39c12;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .reviewText_vrm7k {
+            color: #555;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        .reviewAuthor_vrm7k {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .contentBlock_vrm7k {
+            background: white;
+            padding: 3rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .contentBlockTitle_vrm7k {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .contentBlockText_vrm7k {
+            color: #555;
+            line-height: 1.9;
+            margin-bottom: 1rem;
+        }
+
+        .contentLink_vrm7k {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .contentLink_vrm7k:hover {
+            color: #2980b9;
+        }
+
+        .footer_vrm7k {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 3rem 20px;
+            text-align: center;
+        }
+
+        .footerContent_vrm7k {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footerSection_vrm7k h4 {
+            margin-bottom: 1rem;
+            color: #3498db;
+        }
+
+        .footerSection_vrm7k p {
+            line-height: 1.8;
+            color: #bdc3c7;
+        }
+
+        .phoneLink_vrm7k {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .phoneLink_vrm7k:hover {
+            color: #2980b9;
+        }
+
+        .footerBottom_vrm7k {
+            border-top: 1px solid #34495e;
+            padding-top: 2rem;
+            color: #95a5a6;
+        }
+
+        .footerLinks_vrm7k {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .footerLinks_vrm7k a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footerLinks_vrm7k a:hover {
+            color: #2980b9;
+        }
+
+        .modal_vrm7k {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            overflow-y: auto;
+        }
+
+        .modalContent_vrm7k {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .closeBtn_vrm7k {
+            color: #aaa;
+            float: right;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .closeBtn_vrm7k:hover {
+            color: #000;
+        }
+
+        .modalTitle_vrm7k {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .modalText_vrm7k {
+            color: #555;
+            line-height: 1.9;
+            margin-bottom: 1rem;
+        }
+
+        .galleryGrid_vrm7k {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .galleryItem_vrm7k {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .galleryItem_vrm7k:hover {
+            transform: scale(1.05);
+        }
+
+        .galleryItem_vrm7k img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .processSection_vrm7k {
+            background: white;
+            padding: 60px 20px;
+        }
+
+        .processSteps_vrm7k {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .processStep_vrm7k {
+            text-align: center;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .processStep_vrm7k:hover {
+            background: #ecf0f1;
+        }
+
+        .stepNumber_vrm7k {
+            font-size: 2.5rem;
+            color: #e74c3c;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .stepTitle_vrm7k {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .stepDesc_vrm7k {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .featureList_vrm7k {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .featureList_vrm7k li {
+            padding: 0.8rem 0;
+            color: #555;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .featureList_vrm7k li:before {
+            content: "✓ ";
+            color: #27ae60;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .navMenu_vrm7k {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+
+            .heroTitle_vrm7k {
+                font-size: 2rem;
+            }
+
+            .aboutContent_vrm7k {
+                grid-template-columns: 1fr;
+            }
+
+            .sectionTitle_vrm7k {
+                font-size: 1.8rem;
+            }
+
+            .footerContent_vrm7k {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navBar_vrm7k">
+    <div class="navContainer_vrm7k">
+        <a href="#home" class="navLogo_vrm7k">VroomHome Cabinetry</a>
+        <ul class="navMenu_vrm7k">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="heroSection_vrm7k" id="home">
+    <div class="heroContent_vrm7k">
+        <h1 class="heroTitle_vrm7k">Transform Your Space with Expert Cabinetry</h1>
+        <p class="heroSubtitle_vrm7k">Professional cabinet design, installation, and renovation services for your home and business</p>
+        <button class="ctaButton_vrm7k" onclick="document.getElementById('contactModal_vrm7k').style.display='block'">Get Your Free Consultation</button>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="section_vrm7k" id="services">
+    <div class="container_vrm7k">
+        <h2 class="sectionTitle_vrm7k">Our Cabinetry Services</h2>
+        <div class="servicesGrid_vrm7k">
+            <div class="serviceCard_vrm7k">
+                <div class="serviceIcon_vrm7k">🛠️</div>
+                <h3 class="serviceTitle_vrm7k">Custom Cabinet Design</h3>
+                <p class="serviceDesc_vrm7k">We create bespoke cabinet solutions tailored to your specific needs and aesthetic preferences. Our design team works closely with you to ensure every detail reflects your vision. <a href="#design-details" class="contentLink_vrm7k">Click here to continue</a> learning about our design process.</p>
+            </div>
+            <div class="serviceCard_vrm7k">
+                <div class="serviceIcon_vrm7k">📦</div>
+                <h3 class="serviceTitle_vrm7k">Professional Installation</h3>
+                <p class="serviceDesc_vrm7k">Our experienced installation team ensures precise, flawless cabinet placement. We handle all aspects of installation with meticulous attention to detail and minimal disruption to your space.</p>
+            </div>
+            <div class="serviceCard_vrm7k">
+                <div class="serviceIcon_vrm7k">🔄</div>
+                <h3 class="serviceTitle_vrm7k">Cabinet Renovation</h3>
+                <p class="serviceDesc_vrm7k">Breathe new life into your existing cabinets with our renovation services. From refinishing to hardware updates, we modernize your cabinetry while maintaining structural integrity.</p>
+            </div>
+            <div class="serviceCard_vrm7k">
+                <div class="serviceIcon_vrm7k">🏠</div>
+                <h3 class="serviceTitle_vrm7k">Kitchen Cabinetry</h3>
+                <p class="serviceDesc_vrm7k">Specialized kitchen cabinet solutions that combine functionality with style. We optimize storage, improve workflow, and enhance your kitchen's overall appearance.</p>
+            </div>
+            <div class="serviceCard_vrm7k">
+                <div class="serviceIcon_vrm7k">🚪</div>
+                <h3 class="serviceTitle_vrm7k">Bathroom Vanities</h3>
+                <p class="serviceDesc_vrm7k">Custom bathroom cabinet solutions that maximize space and add elegance. Our vanities are built for durability and designed to complement any bathroom style.</p>
+            </div>
+            <div class="serviceCard_vrm7k">
+                <div class="serviceIcon_vrm7k">📐</div>
+                <h3 class="serviceTitle_vrm7k">Built-in Storage Solutions</h3>
+                <p class="serviceDesc_vrm7k">Maximize your space with custom built-in storage. From closets to wall units, we design storage that's both beautiful and highly functional.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="aboutSection_vrm7k" id="about">
+    <div class="aboutContent_vrm7k">
+        <div class="aboutText_vrm7k">
+            <h3>About VroomHome Cabinetry</h3>
+            <p>VroomHome has been serving the community with exceptional cabinetry services since 2008. Our commitment to quality craftsmanship and customer satisfaction has made us a trusted name in home improvement. We believe that every space deserves thoughtful design and meticulous execution.</p>
+            <p style="margin-top: 1rem;">Our team of skilled craftspeople combines traditional woodworking techniques with modern design principles. We source only the finest materials and employ cutting-edge installation methods to ensure your cabinets stand the test of time.</p>
+            <p style="margin-top: 1rem;">Whether you're renovating a single room or undertaking a complete home transformation, VroomHome brings expertise, professionalism, and attention to detail to every project.</p>
+        </div>
+        <img src="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Professional cabinetry installation" class="aboutImage_vrm7k">
+    </div>
+</section>
+
+<!-- History Section -->
+<section class="section_vrm7k">
+    <div class="container_vrm7k">
+        <h2 class="sectionTitle_vrm7k">Our Journey</h2>
+        
+        <div class="historyBlock_vrm7k">
+            <div class="historyYear_vrm7k">2008 - The Beginning</div>
+            <div class="historyText_vrm7k">VroomHome Cabinetry was founded by master craftsman Marcus Thorne with a vision to revolutionize residential cabinetry. Starting with a small workshop and a team of three, we focused on delivering exceptional quality to every client. Our first year saw us complete over 40 residential projects, establishing our reputation for reliability and craftsmanship.</div>
+        </div>
+
+        <div class="historyBlock_vrm7k">
+            <div class="historyYear_vrm7k">2012 - Expansion & Recognition</div>
+            <div class="historyText_vrm7k">By 2012, VroomHome had grown to a team of 15 skilled professionals. We expanded our workshop and invested in state-of-the-art equipment. That year, we received our first industry award for innovative cabinet design. Our portfolio had grown to include over 300 completed projects across residential and commercial spaces.</div>
+        </div>
+
+        <div class="historyBlock_vrm7k">
+            <div class="historyYear_vrm7k">2016 - Commercial Division Launch</div>
+            <div class="historyText_vrm7k">Recognizing the demand for commercial cabinetry solutions, we launched our commercial division. This expansion allowed us to serve restaurants, offices, retail spaces, and hospitality venues. Our commercial projects brought new challenges and opportunities, further refining our expertise and capabilities.</div>
+        </div>
+
+        <div class="historyBlock_vrm7k">
+            <div class="historyYear_vrm7k">2020 - Digital Transformation</div>
+            <div class="historyText_vrm7k">During 2020, we embraced digital innovation, implementing 3D design software and virtual consultation capabilities. This allowed us to serve clients more effectively while maintaining our commitment to personalized service. We also enhanced our sustainability practices, sourcing eco-friendly materials and reducing waste.</div>
+        </div>
+
+        <div class="historyBlock_vrm7k">
+            <div class="historyYear_vrm7k">2024 - Present Day Excellence</div>
+            <div class="historyText_vrm7k">Today, VroomHome operates with a team of 40+ professionals and has completed over 1,200 projects. We continue to innovate in design and installation techniques while maintaining the personal touch that defines our brand. Our commitment to excellence remains unwavering as we look toward future growth and continued service to our valued clients.</div>
+        </div>
+    </div>
+</section>
+
+<!-- Process Section -->
+<section class="processSection_vrm7k" id="process">
+    <div class="container_vrm7k">
+        <h2 class="sectionTitle_vrm7k">Our Process</h2>
+        <div class="processSteps_vrm7k">
+            <div class="processStep_vrm7k">
+                <div class="stepNumber_vrm7k">1</div>
+                <h4 class="stepTitle_vrm7k">Consultation</h4>
+                <p class="stepDesc_vrm7k">We begin with a comprehensive consultation to understand your needs, preferences, and budget. Our team listens carefully to your vision.</p>
+            </div>
+            <div class="processStep_vrm7k">
+                <div class="stepNumber_vrm7k">2</div>
+                <h4 class="stepTitle_vrm7k">Design & Planning</h4>
+                <p class="stepDesc_vrm7k">Our designers create detailed plans and 3D renderings. We refine the design until it perfectly matches your expectations.</p>
+            </div>
+            <div class="processStep_vrm7k">
+                <div class="stepNumber_vrm7k">3</div>
+                <h4 class="stepTitle_vrm7k">Material Selection</h4>
+                <p class="stepDesc_vrm7k">We guide you through material options, finishes, and hardware selections. Quality materials ensure longevity and beauty.</p>
+            </div>
+            <div class="processStep_vrm7k">
+                <div class="stepNumber_vrm7k">4</div>
+                <h4 class="stepTitle_vrm7k">Crafting</h4>
+                <p class="stepDesc_vrm7k">Our skilled craftspeople build your cabinets with precision and attention to detail in our state-of-the-art workshop.</p>
+            </div>
+            <div class="processStep_vrm7k">
+                <div class="stepNumber_vrm7k">5</div>
+                <h4 class="stepTitle_vrm7k">Installation</h4>
+                <p class="stepDesc_vrm7k">Professional installation ensures perfect fit and finish. We handle all aspects with minimal disruption to your space.</p>
+            </div>
+            <div class="processStep_vrm7k">
+                <div class="stepNumber_vrm7k">6</div>
+                <h4 class="stepTitle_vrm7k">Final Inspection</h4>
+                <p class="stepDesc_vrm7k">We conduct thorough quality checks and provide you with care instructions. Your satisfaction is our priority.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="section_vrm7k" id="gallery">
+    <div class="container_vrm7k">
+        <h2 class="sectionTitle_vrm7k">Project Gallery</h2>
+        <div class="galleryGrid_vrm7k">
+            <div class="galleryItem_vrm7k">
+                <img src="https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Modern kitchen cabinetry">
+            </div>
+            <div class="galleryItem_vrm7k">
+                <img src="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Custom bathroom vanity">
+            </div>
+            <div class="galleryItem_vrm7k">
+                <img src="https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Built-in storage solutions">
+            </div>
+            <div class="galleryItem_vrm7k">
+                <img src="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Contemporary cabinet design">
+            </div>
+            <div class="galleryItem_vrm7k">
+                <img src="https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Residential cabinetry project">
+            </div>
+            <div class="galleryItem_vrm7k">
+                <img src="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Commercial cabinet installation">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="section_vrm7k" id="features">
+    <div class="container_vrm7k">
+        <h2 class="sectionTitle_vrm7k">Why Choose VroomHome</h2>
+        <div class="contentBlock_vrm7k">
+            <h3 class="contentBlockTitle_vrm7k">Quality Craftsmanship & Materials</h3>
+            <p class="contentBlockText_vrm7k">We source only premium materials from trusted suppliers. Our craftspeople employ traditional woodworking techniques combined with modern precision tools. Every cabinet is built to last decades, not just years. <a href="#quality-details" class="contentLink_vrm7k">Click here to continue</a> reading about our material standards.</p>
+            <ul class="featureList_vrm7k">
+                <li>Solid wood construction options</li>
+                <li>Durable hardware and hinges</li>
+                <li>Eco-friendly finishing options</li>
+                <li>Customizable interior organization</li>
+                <li>Lifetime warranty on craftsmanship</li>
+            </ul>
+        </div>
+
+        <div class="contentBlock_vrm7k">
+            <h3 class="contentBlockTitle_vrm7k">Expert Design Team</h3>
+            <p class="contentBlockText_vrm7k">Our design specialists stay current with industry trends while respecting timeless design principles. We understand spatial planning, ergonomics, and aesthetic harmony. Each design is tailored to your lifestyle and preferences, ensuring functionality meets beauty.</p>
+            <ul class="featureList_vrm7k">
+                <li>3D visualization and renderings</li>
+                <li>Space optimization strategies</li>
+                <li>Color and finish consultation</li>
+                <li>Hardware selection guidance</li>
+                <li>Unlimited design revisions</li>
+            </ul>
+        </div>
+
+        <div class="contentBlock_vrm7k">
+            <h3 class="contentBlockTitle_vrm7k">Professional Installation Services</h3>
+            <p class="contentBlockText_vrm7k">Our installation team brings years of experience to every project. We handle complex installations with precision, ensuring perfect alignment and finish. We protect your home during installation and clean up thoroughly upon completion. <a href="#installation-details" class="contentLink_vrm7k">Click here to continue</a> learning about our installation process.</p>
+            <ul class="featureList_vrm7k">
+                <li>Licensed and insured installers</li>
+                <li>Minimal disruption to your home</li>
+                <li>Precise measurements and alignment</li>
+                <li>Complete cleanup and disposal</li>
+                <li>Post-installation support</li>
+            </ul>
+        </div>
+
+        <div class="contentBlock_vrm7k">
+            <h3 class="contentBlockTitle_vrm7k">Customer-Centric Approach</h3>
+            <p class="contentBlockText_vrm7k">Your satisfaction is our ultimate goal. We maintain open communication throughout every project phase. Our team is responsive to your questions and concerns, ensuring a smooth and enjoyable experience from start to finish.</p>
+            <ul class="featureList_vrm7k">
+                <li>Transparent pricing and timelines</li>
+                <li>Regular project updates</li>
+                <li>Responsive customer support</li>
+                <li>Flexible scheduling options</li>
+                <li>Satisfaction guarantee</li>
+            </ul>
+        </div>
+
+        <div class="contentBlock_vrm7k">
+            <h3 class="contentBlockTitle_vrm7k">Innovative Solutions & Technology</h3>
+            <p class="contentBlockText_vrm7k">We leverage cutting-edge technology to enhance our services. From 3D design software to precision CNC machinery, we combine innovation with traditional craftsmanship. This allows us to deliver superior results efficiently.</p>
+            <ul class="featureList_vrm7k">
+                <li>Advanced 3D design software</li>
+                <li>CNC precision cutting</li>
+                <li>Virtual consultation capabilities</li>
+                <li>Digital project management</li>
+                <li>Real-time progress tracking</li>
+            </ul>
+        </div>
+
+        <div class="contentBlock_vrm7k">
+            <h3 class="contentBlockTitle_vrm7k">Sustainability & Environmental Responsibility</h3>
+            <p class="contentBlockText_vrm7k">We're committed to environmentally responsible practices. We source sustainable materials, minimize waste, and use eco-friendly finishes. Our commitment to the environment doesn't compromise quality or aesthetics. <a href="#sustainability-details" class="contentLink_vrm7k">Click here to continue</a> exploring our green initiatives.</p>
+            <ul class="featureList_vrm7k">
+                <li>FSC-certified wood options</li>
+                <li>Low-VOC finishing products</li>
+                <li>Waste reduction programs</li>
+                <li>Recycled material options</li>
+                <li>Energy-efficient production</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Reviews Section -->
+<section class="reviewsSection_vrm7k" id="reviews">
+    <div class="container_vrm7k">
+        <h2 class="sectionTitle_vrm7k">Customer Reviews</h2>
+        <div class="reviewsGrid_vrm7k">
+            <div class="reviewCard_vrm7k">
+                <div class="reviewStars_vrm7k">★★★★★</div>
+                <p class="reviewText_vrm7k">"VroomHome transformed our kitchen completely. The design team understood our vision perfectly, and the installation was flawless. The attention to detail is remarkable. Highly recommended!"</p>
+                <p class="reviewAuthor_vrm7k">- Sarah Mitchell</p>
+            </div>
+            <div class="reviewCard_vrm7k">
+                <div class="reviewStars_vrm7k">★★★★★</div>
+                <p class="reviewText_vrm7k">"Professional, punctual, and perfect. The team was respectful of our home and completed the project on schedule. Our new bathroom vanity is absolutely stunning. Worth every penny!"</p>
+                <p class="reviewAuthor_vrm7k">- James Rodriguez</p>
+            </div>
+            <div class="reviewCard_vrm7k">
+                <div class="reviewStars_vrm7k">★★★★★</div>
+                <p class="reviewText_vrm7k">"The consultation process was thorough and helpful. They listened to our needs and delivered exactly what we wanted. The quality of the cabinets is exceptional. Best home improvement investment we've made."</p>
+                <p class="reviewAuthor_vrm7k">- Emily Chen</p>
+            </div>
+            <div class="reviewCard_vrm7k">
+                <div class="reviewStars_vrm7k">★★★★★</div>
+                <p class="reviewText_vrm7k">"Outstanding craftsmanship and customer service. The team went above and beyond to ensure everything was perfect. Our home office storage solution is both beautiful and incredibly functional."</p>
+                <p class="reviewAuthor_vrm7k">- David Thompson</p>
+            </div>
+            <div class="reviewCard_vrm7k">
+                <div class="reviewStars_vrm7k">★★★★★</div>
+                <p class="reviewText_vrm7k">"From initial design to final installation, everything was handled professionally. The communication was excellent, and the final result exceeded our expectations. Highly satisfied!"</p>
+                <p class="reviewAuthor_vrm7k">- Patricia Anderson</p>
+            </div>
+            <div class="reviewCard_vrm7k">
+                <div class="reviewStars_vrm7k">★★★★★</div>
+                <p class="reviewText_vrm7k">"We had a complex renovation project, and VroomHome handled it perfectly. The team's expertise and professionalism made the entire process smooth and stress-free. Fantastic results!"</p>
+                <p class="reviewAuthor_vrm7k">- Michael Torres</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Additional Content Block -->
+<section class="section_vrm7k">
+    <div class="container_vrm7k">
+        <div class="contentBlock_vrm7k">
+            <h3 class="contentBlockTitle_vrm7k">Kitchen Cabinet Trends & Innovations</h3>
+            <p class="contentBlockText_vrm7k">The world of kitchen cabinetry is constantly evolving with new trends and innovations. Modern kitchens are embracing open shelving concepts combined with closed storage, creating visual interest while maintaining functionality. Two-tone cabinetry, where upper and lower cabinets feature different colors or finishes, continues to gain popularity. Soft-close hinges and drawer mechanisms have become standard expectations rather than luxury additions.</p>
+            <p class="contentBlockText_vrm7k">Smart storage solutions are revolutionizing kitchen organization. Pull-out pantries, corner carousels, and vertical dividers maximize space utilization. Integrated appliances create seamless kitchen designs, while waterfall countertops flowing from islands add contemporary elegance. Sustainable materials like reclaimed wood and bamboo are increasingly popular among environmentally conscious homeowners.</p>
+            <p class="contentBlockText_vrm7k">At VroomHome, we stay ahead of these trends while respecting timeless design principles. We help clients choose innovations that enhance their lifestyle without compromising durability or aesthetics. <a href="#trends-details" class="contentLink_vrm7k">Click here to continue</a> exploring current kitchen design trends with our team.</p>
+        </div>
+
+        <div class="contentBlock_vrm7k">
+            <h3 class="contentBlockTitle_vrm7k">Bathroom Vanity Design Excellence</h3>
+            <p class="contentBlockText_vrm7k">Bathroom vanities serve as both functional storage and design focal points. Modern bathroom design emphasizes clean lines, minimalist aesthetics, and efficient storage. Floating vanities create an illusion of space and simplify cleaning. Double vanities in master bathrooms provide convenience and luxury for shared spaces.</p>
+            <p class="contentBlockText_vrm7k">Material selection for bathroom vanities requires special consideration due to moisture exposure. We utilize water-resistant finishes and durable hardware specifically designed for bathroom environments. Integrated lighting, mirrors, and countertops create cohesive designs that elevate the entire bathroom experience.</p>
+            <p class="contentBlockText_vrm7k">Our bathroom vanity projects range from simple updates to complete renovations. We consider plumbing requirements, ventilation, and lighting to create functional, beautiful spaces. Each project reflects the homeowner's personal style while maximizing practical utility.</p>
+        </div>
+
+        <div class="contentBlock_vrm7k">
+            <h3 class="contentBlockTitle_vrm7k">Commercial Cabinetry Solutions</h3>
+            <p class="contentBlockText_vrm7k">Commercial spaces demand cabinetry that combines durability with professional aesthetics. Restaurants require specialized storage for food service equipment and supplies. Retail environments need display cabinets that showcase products while maintaining organization. Office spaces benefit from filing systems and storage solutions that enhance productivity.</p>
+            <p class="contentBlockText_vrm7k">VroomHome's commercial division understands the unique requirements of business environments. We design systems that withstand heavy use while maintaining appearance. Our commercial projects include restaurants, retail stores, medical offices, and corporate headquarters. We work within tight timelines and budgets while never compromising quality.</p>
+            <p class="contentBlockText_vrm7k">Our commercial expertise extends to ADA compliance, safety standards, and specialized storage requirements. We've successfully completed complex installations in operational businesses with minimal disruption.</p>
+        </div>
+
+        <div class="contentBlock_vrm7k">
+            <h3 class="contentBlockTitle_vrm7k">Maintenance & Care for Your Cabinetry</h3>
+            <p class="contentBlockText_vrm7k">Proper maintenance ensures your cabinetry remains beautiful and functional for decades. Regular cleaning with appropriate products prevents buildup and maintains finishes. We provide detailed care instructions for each project, tailored to your specific materials and finishes.</p>
+            <p class="contentBlockText_vrm7k">Wood cabinets benefit from occasional conditioning to maintain luster and protect against moisture. Hardware should be checked periodically to ensure proper function. Soft-close mechanisms may require occasional adjustment as they age. We offer maintenance services and can address any issues that arise.</p>
+            <p class="contentBlockText_vrm7k">Understanding your cabinetry's specific needs helps extend its lifespan. Different wood species, finishes, and hardware types require different care approaches. Our team is always available to answer questions about maintaining your investment.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="section_vrm7k" id="contact">
+    <div class="container_vrm7k">
+        <h2 class="sectionTitle_vrm7k">Get Started Today</h2>
+        <div class="contentBlock_vrm7k" style="text-align: center;">
+            <p class="contentBlockText_vrm7k">Ready to transform your space with professional cabinetry? Contact VroomHome today for a free consultation. Our team is ready to discuss your project and answer any questions you may have.</p>
+            <button class="ctaButton_vrm7k" onclick="document.getElementById('contactModal_vrm7k').style.display='block'" style="margin-top: 1rem;">Schedule Your Consultation</button>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer_vrm7k">
+    <div class="footerContent_vrm7k">
+        <div class="footerSection_vrm7k">
+            <h4>Contact Information</h4>
+            <p>Phone: <a href="tel:+15551234567" class="phoneLink_vrm7k">+1 (555) 123-4567</a></p>
+            <p>Email: info@vroomhome.com</p>
+            <p>Address: 2847 Craftsman Lane, Suite 100, Portland, OR 97214</p>
+        </div>
+        <div class="footerSection_vrm7k">
+            <h4>Business Hours</h4>
+            <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+            <p>Saturday: 9:00 AM - 4:00 PM</p>
+            <p>Sunday: Closed</p>
+        </div>
+        <div class="footerSection_vrm7k">
+            <h4>Service Areas</h4>
+            <p>Portland Metro Area</p>
+            <p>Vancouver, WA</p>
+            <p>Salem, OR</p>
+            <p>Eugene, OR</p>
+        </div>
+    </div>
+    <div class="footerBottom_vrm7k">
+        <div class="footerLinks_vrm7k">
+            <a href="#" onclick="document.getElementById('privacyModal_vrm7k').style.display='block'; return false;">Privacy Policy</a>
+            <a href="#" onclick="document.getElementById('termsModal_vrm7k').style.display='block'; return false;">Terms of Service</a>
+            <a href="mailto:info@vroomhome.com">Contact Us</a>
+        </div>
+        <p>&copy; 2024 VroomHome Cabinetry. All rights reserved. | Licensed & Insured</p>
+    </div>
+</footer>
+
+<!-- Contact Modal -->
+<div id="contactModal_vrm7k" class="modal_vrm7k">
+    <div class="modalContent_vrm7k">
+        <span class="closeBtn_vrm7k" onclick="document.getElementById('contactModal_vrm7k').style.display='none'">&times;</span>
+        <h2 class="modalTitle_vrm7k">Schedule Your Free Consultation</h2>
+        <p class="modalText_vrm7k">Fill out the form below and our team will contact you within 24 hours to schedule your consultation.</p>
+        <form style="display: grid; gap: 1rem;">
+            <input type="text" placeholder="Your Name" required style="padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px;">
+            <input type="email" placeholder="Your Email" required style="padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px;">
+            <input type="tel" placeholder="Your Phone" required style="padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px;">
+            <textarea placeholder="Tell us about your project" rows="5" style="padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px; font-family: inherit;"></textarea>
+            <button type="submit" class="ctaButton_vrm7k">Submit Request</button>
+        </form>
+    </div>
+</div>
+
+<!-- Privacy Policy Modal -->
+<div id="privacyModal_vrm7k" class="modal_vrm7k">
+    <div class="modalContent_vrm7k">
+        <span class="closeBtn_vrm7k" onclick="document.getElementById('privacyModal_vrm7k').style.display='none'">&times;</span>
+        <h2 class="modalTitle_vrm7k">Privacy Policy</h2>
+        <p class="modalText_vrm7k"><strong>Last Updated: January 2024</strong></p>
+        
+        <h3 style="color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem;">1. Information We Collect</h3>
+        <p class="modalText_vrm7k">VroomHome Cabinetry collects information you provide directly to us, such as when you request a consultation, submit a form, or contact us by phone or email. This may include your name, email address, phone number, and project details. We may also collect information about your browsing behavior through cookies and similar technologies.</p>
+
+        <h3 style="color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem;">2. How We Use Your Information</h3>
+        <p class="modalText_vrm7k">We use the information we collect to respond to your inquiries, schedule consultations, provide our services, and improve our website and services. We may also use your information to send you promotional materials, though you can opt out of these communications at any time.</p>
+
+        <h3 style="color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem;">3. Information Sharing</h3>
+        <p class="modalText_vrm7k">We do not sell, trade, or rent your personal information to third parties. We may share information with service providers who assist us in operating our website and conducting our business, subject to confidentiality agreements.</p>
+
+        <h3 style="color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem;">4. Data Security</h3>
+        <p class="modalText_vrm7k">We implement appropriate security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is completely secure.</p>
+
+        <h3 style="color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem;">5. Your Rights</h3>
+        <p class="modalText_vrm7k">You have the right to access, update, or delete your personal information. To exercise these rights, please contact us at info@vroomhome.com. We will respond to your request within 30 days.</p>
+
+        <h3 style="color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem;">6. Contact Us</h3>
+        <p class="modalText_vrm7k">If you have questions about this Privacy Policy, please contact us at info@vroomhome.com or call +1 (555) 123-4567.</p>
+    </div>
+</div>
+
+<!-- Terms of Service Modal -->
+<div id="termsModal_vrm7k" class="modal_vrm7k">
+    <div class="modalContent_vrm7k">
+        <span class="closeBtn_vrm7k" onclick="document.getElementById('termsModal_vrm7k').style.display='none'">&times;</span>
+        <h2 class="modalTitle_vrm7k">Terms of Service</h2>
+        <p class="modalText_vrm7k"><strong>Last Updated: January 2024</strong></p>
+
+        <h3 style="color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem;">1. Agreement to Terms</h3>
+        <p class="modalText_vrm7k">By accessing and using the VroomHome Cabinetry website, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
+
+        <h3 style="color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem;">2. Use License</h3>
+        <p class="modalText_vrm7k">Permission is granted to temporarily download one copy of the materials (information or software) on VroomHome Cabinetry's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not: modify or copy the materials; use the materials for any commercial purpose or for any public display; attempt to decompile or reverse engineer any software contained on the website; remove any copyright or other proprietary notations from the materials; transfer the materials to another person or "mirror" the materials on any other server.</p>
+
+        <h3 style="color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem;">3. Disclaimer</h3>
+        <p class="modalText_vrm7k">The materials on VroomHome Cabinetry's website are provided on an 'as is' basis. VroomHome Cabinetry makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
+
+        <h3 style="color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem;">4. Limitations</h3>
+        <p class="modalText_vrm7k">In no event shall VroomHome Cabinetry or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on VroomHome Cabinetry's website.</p>
+
+        <h3 style="color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem;">5. Accuracy of Materials</h3>
+        <p class="modalText_vrm7k">The materials appearing on VroomHome Cabinetry's website could include technical, typographical, or photographic errors. VroomHome Cabinetry does not warrant that any of the materials on its website are accurate, complete, or current. VroomHome Cabinetry may make changes to the materials contained on its website at any time without notice.</p>
+
+        <h3 style="color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem;">6. Links</h3>
+        <p class="modalText_vrm7k">VroomHome Cabinetry has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by VroomHome Cabinetry of the site. Use of any such linked website is at the user's own risk.</p>
+
+        <h3 style="color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem;">7. Modifications</h3>
+        <p class="modalText_vrm7k">VroomHome Cabinetry may revise these terms of service for its website at any time without notice. By using this website, you are agreeing to be bound by the then current version of these terms of service.</p>
+
+        <h3 style="color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem;">8. Governing Law</h3>
+        <p class="modalText_vrm7k">These terms and conditions are governed by and construed in accordance with the laws of Oregon, and you irrevocably submit to the exclusive jurisdiction of the courts in that location.</p>
+
+        <h3 style="color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem;">9. Contact Information</h3>
+        <p class="modalText_vrm7k">If you have any questions about these Terms of Service, please contact us at info@vroomhome.com or call +1 (555) 123-4567.</p>
+    </div>
+</div>
+
+<script>
+    // Close modals when clicking outside
+    window.onclick = function(event) {
+        let contactModal = document.getElementById('contactModal_vrm7k');
+        let privacyModal = document.getElementById('privacyModal_vrm7k');
+        let termsModal = document.getElementById('termsModal_vrm7k');
+        
+        if (event.target == contactModal) {
+            contactModal.style.display = 'none';
+        }
+        if (event.target == privacyModal) {
+            privacyModal.style.display = 'none';
+        }
+        if (event.target == termsModal) {
+            termsModal.style.display = 'none';
+        }
+    }
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            let href = this.getAttribute('href');
+            if (href !== '#' && !href.includes('Modal')) {
+                e.preventDefault();
+                let target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
+</script>
+
+<a href="/" alt="stats counter free" target="_blank" >
+<img  src="https://sstatic1.histats.com/0.gif?4977134&101" alt="stats counter free" border="0">
+
+</body>
+</html>
